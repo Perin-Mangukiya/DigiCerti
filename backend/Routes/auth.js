@@ -462,27 +462,6 @@ router.get('/fetchallstudents/:id', fetchissuer, async (req, res) => {
     
 })
 
-// ROUTE 5: Add a Student in a course using: POST "/api/courses/addstudents". Login required
-// Configuration 
-// cloudinary.config({
-//   cloud_name: "dkfjb8xsm",
-//   api_key: "687961213743838",
-//   api_secret: "iTxPxJdfWwCVRZs_6nmo3F4bEG4"
-// });
-
-// cloudinary.uploader.upload(dataURL, {
-//   resource_type: 'image',
-//   public_id: 'my_image_name',
-//   overwrite: true
-//  }, 
-//  function(error, result) { 
-//    console.log(result, error) 
-//  });
-
-
-
-
-
 router.post('/addstudents', fetchissuer, [
     body('coursename', 'Enter a valid title').isLength({ min: 3 }),
     body('StudentName', 'Enter a valid name').isLength({ min: 3 }),
